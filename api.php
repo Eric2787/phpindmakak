@@ -1,11 +1,12 @@
 <?php
 
-$servidor = "http://rabano.ddns.net:7878/";
+$servidor = "http://rabano.ddns.net";
 $dbname = "estacionamiento";
 $user = "androidindmakak";
 $pass = "N7/UPOBVxmIy-cgp";
+$port = 7878;
 
-$conn = new mysqli($servidor, $user, $pass, $dbname);
+$conn = new mysqli($servidor, $user, $pass, $dbname, $port);
 if ($conn->connect_error) {
     die("Error" . $conn->connect_error);
 }
